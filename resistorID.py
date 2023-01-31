@@ -130,8 +130,8 @@ def findBands(resistorInfo, DEBUG):
                 leftmostPoint = tuple(contours[k][contours[k][:,:,0].argmin()][0])
                 bandsPos += [leftmostPoint + tuple(clr[2:])]
                 cv2.circle(pre_bil, leftmostPoint, 5, (255,0,255),-1)
-            else:
-                contours.pop(k)
+            """ else:
+                contours.pop(k) """
         
         cv2.drawContours(pre_bil, contours, -1, clr[-1], 3)
         if(DEBUG):
