@@ -122,7 +122,7 @@ def findBands(resistorInfo, DEBUG):
                 mask = cv2.bitwise_or(redMask2,mask,mask)
              
         mask = cv2.bitwise_and(mask,thresh,mask= mask)
-        im2, contours, hierarchy = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+        contours, hierarchy = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
         #filter invalid contours, store valid ones
         for k in range(len(contours)-1,-1,-1):
